@@ -41,7 +41,7 @@ bool UQatalog::RequestUserID()
 	FHttpModule * httpModule = &FHttpModule::Get();
 	TSharedRef<IHttpRequest> HttpRequest = httpModule->CreateRequest();
 	HttpRequest->SetVerb("POST");
-	HttpRequest->SetURL(FString("http://95.85.46.215:8080/user/create/").Append(FPlatformMisc::GetMachineId().ToString()));
+	HttpRequest->SetURL(FString("http://localhost:8080/user/create/").Append(FPlatformMisc::GetMachineId().ToString()));
 	HttpRequest->SetHeader("User-Agent", "QatalogClient/1.0");
 	HttpRequest->SetHeader("Content-Type", "application/json");
 	
@@ -85,7 +85,7 @@ bool UQatalog::PostData(FString key, TArray<FString> keys, TArray<FString> value
 	FHttpModule * httpModule = &FHttpModule::Get();
 	TSharedRef<IHttpRequest> HttpRequest = httpModule->CreateRequest();
 	HttpRequest->SetVerb("POST");
-	HttpRequest->SetURL(FString("http://95.85.46.215:8080/push/").Append(*UserID));
+	HttpRequest->SetURL(FString("http://localhost:8080/push/").Append(*UserID));
 	HttpRequest->SetHeader("User-Agent", "QatalogClient/1.0");
 	HttpRequest->SetHeader("Content-Type", "application/json");
 	
