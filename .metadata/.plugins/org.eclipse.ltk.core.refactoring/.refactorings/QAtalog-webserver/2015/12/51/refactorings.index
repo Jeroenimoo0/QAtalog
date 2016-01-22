@@ -1,0 +1,13 @@
+1450178211266	Rename local variable 'partitionSize'
+1450178218257	Rename local variable 'partitions'
+1450430437608	Copy compilation unit
+1450431851050	Rename type 'Status'
+1450432887964	Delete element
+1450433612749	Rename type 'GetUser'
+1450433720093	Rename type 'CreateUser'
+1450434428000	Move compilation units
+1450434478246	Move compilation units
+1450434480943	Delete element
+1450434614052	Rename method 'debugPost'
+1450434736583	Rename type 'Main'
+1450444615478	Rename type 'DataInsert'

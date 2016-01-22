@@ -1,0 +1,23 @@
+package net.jeroenimoo0.qatalog.web;
+
+import java.io.IOException;
+
+import org.restlet.representation.Representation;
+import org.restlet.resource.Post;
+import org.restlet.resource.ServerResource;
+
+/**
+ * Inserts data into the database.
+ * 
+ * @author Jeroenimoo0
+ */
+public class DataPush extends ServerResource {
+	
+	@Post("txt|json")
+	public String toString(Representation entity) throws IOException {
+
+		System.out.println(entity.getText());
+		
+		return "";
+	}
+}

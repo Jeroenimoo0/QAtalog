@@ -1,0 +1,23 @@
+package net.jeroenimoo0.qatalog.web;
+
+import org.restlet.data.Header;
+import org.restlet.resource.Post;
+import org.restlet.resource.ServerResource;
+
+/**
+ * Inserts data into the database.
+ * 
+ * @author Jeroenimoo0
+ */
+public class DataPush extends ServerResource {
+	
+	@Post("json")
+	public String toString(Representation entity) {
+
+		for(Header header : getRequest().getHeaders()) {
+			System.out.println(header);
+		}
+		
+		return "";
+	}
+}

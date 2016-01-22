@@ -1,0 +1,62 @@
+package net.jeroenimoo0.qatalog.web;
+
+import java.io.IOException;
+import java.util.Map.Entry;
+
+import net.jeroenimoo0.qatalog.QAtalog;
+import net.jeroenimoo0.qatalog.QAtalogServerResource;
+
+import org.bson.BsonArray;
+import org.bson.Document;
+import org.restlet.representation.Representation;
+import org.restlet.resource.Post;
+
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+import com.mongodb.client.MongoCollection;
+
+/**
+ * Inserts data into the database.
+ * 
+ * @author Jeroenimoo0
+ */
+public class DataPush extends QAtalogServerResource {
+	
+	@Post("json")
+	public String toString(Representation entity) throws IOException {
+		String deviceId = getAttribute("did");
+		if(deviceId == null) return createError("missing parameter 'did' (Device ID)");
+		
+		String text = entity.getText();
+		
+		JsonObject json = new JsonParser().parse(text).getAsJsonObject();
+		
+		System.out.println(json);
+		
+		//obj
+			//deaths
+				//level1
+					//1
+					//2
+					//3
+				//level2
+			//kills
+		
+		MongoCollection<Document> users = QAtalog.getDatabase().getCollection("users");
+		
+		for(Entry<String, JsonElement> entry : json.entrySet()) {
+			System.out.println(entry.getValue());
+			if(!entry.getValue().isJsonArray()) continue;
+			System.out.println("Pushing " + entry.getKey() + ": " + entry.getValue().toString());
+			
+			Document arrayDoc = new Document("$each", Document.parse(entry.getValue().toString()));
+			Document valueDoc = new Document(entry.getKey(), arrayDoc);
+			Document pushDoc = new Document("$push", valueDoc);
+			
+			users.updateOne(new Document("did", deviceId), pushDoc);
+		}
+		
+		return json.toString();
+	}
+}

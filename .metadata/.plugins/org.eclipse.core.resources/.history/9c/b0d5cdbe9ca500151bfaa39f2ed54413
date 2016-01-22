@@ -1,0 +1,25 @@
+package net.jeroenimoo0.qatalog.web;
+
+import java.io.IOException;
+
+import org.restlet.representation.Representation;
+import org.restlet.resource.Post;
+import org.restlet.resource.ServerResource;
+
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+
+/**
+ * Inserts data into the database.
+ * 
+ * @author Jeroenimoo0
+ */
+public class DataPush extends ServerResource {
+	
+	@Post("json")
+	public String toString(Representation entity) throws IOException {
+		JsonObject json = new JsonParser().parse(entity.getText()).getAsJsonObject();
+		
+		return json.toString();
+	}
+}
