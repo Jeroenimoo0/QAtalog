@@ -1,7 +1,7 @@
 # QAtalog-unreal4 (Simple)
 This sub-project is source code for a simple QAtalog client implementation for Unreal Engine 4.
 
-# Instalation
+# Installation
 1. Copy the two source files into your project
 2. Open your project Build.cs and add the following code in the constructor:
 ```
