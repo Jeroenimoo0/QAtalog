@@ -41,15 +41,15 @@ public class QAtalog {
 	}
 	
 	public static void main(String[] args) {
-		if(!start()) System.exit(-1);
+		if(!start("qatalog")) System.exit(-1);
 	}
 	
-	public static boolean start() {
+	public static boolean start(String databaseName) {
 		System.out.println("Starting up server...");
 		
 		try {
 			client = new MongoClient("localhost");
-			database = client.getDatabase("qatalog");
+			database = client.getDatabase(databaseName);
 			
 			QAtalog.getDatabase().runCommand(new Document("serverStatus", "1"));
 		} catch(Exception e) {
