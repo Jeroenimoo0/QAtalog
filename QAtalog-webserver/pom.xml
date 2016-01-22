@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>net.jeroenimoo0.qatalog</groupId>
 	<artifactId>QAtalog-webserver</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>QAtalog-webserver</name>
 
 	<properties>
