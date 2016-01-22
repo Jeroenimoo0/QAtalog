@@ -128,10 +128,19 @@ Response:
 `status` will be `success` if the data was pushed successfully and `error` if something went wrong during the request.
 
 # Server implementation
-Current version: 0.0.1-SNAPSHOT
+Current version: 1.0.0 Pre-release
 
-# Client Implementations
-- [Unreal engine 4 (Simple)](QAtalog-unreal4/README.md)
+# Projects
+- [Unreal engine 4](QAtalog-unreal4/README.md) (Simple)
  - Generates user ID & stores it
  - Simple instant push
  - Can push any key/value data
+- [QAtalog webserver](QAtalog-webserver/)
+ - Standalone webserver
+ - Runs anywhere on java 8
+ - Builds using maven
+- [QAtalog client](QAtalog-client/) (Planned)
+ - C++ crossplatform
+ - Creating users
+ - Simple data batching
+ - Data pushing
