@@ -1,24 +1,24 @@
 # QAtalog
 Open source QA statistics tool in development.
 
-Currently the project is not intended for use in production enviourment as it is relatively easy to overload the server. Use on your own risk.
+Currently the project is not intended for use in production environment as it is relatively easy to overload the server. Use on your own risk.
 
 # Developer Agreement & Policy
 Some rules for the project to make sure updating the version of the project your are using does not bring any problems.
 
 ### Major version updates
-- Functionality is allowed to become depricated
+- Functionality is allowed to become deprecated
 - Deprecated functionality can be removed if it was deprecated in previous major releases
 
 ### Minor version updates
-- Functionality is allowed to become depricated
+- Functionality is allowed to become deprecated
 - Deprecated functionality will not be removed between minor releases
 
 ### Patch version updates
-- No functionality will become depricated
+- No functionality will become deprecated
 
 # License
-This project falls under the GNU General Public License v3.0 which full license can be found in the license.txt file.
+This project falls under the GNU General Public License v3.0 which full license can be found in the [license.txt](license.txt) file.
 
 # Documentation
 Below is listed the documentation about the communication between the server and client. This will allow for custom client implementations on any platform.
@@ -47,7 +47,7 @@ Response:
  "status":"<status>"
 }
 ```
-`status` will be `ok` if the server is running correctly and will return `error` if somewthing went wrong during the request.
+`status` will be `ok` if the server is running correctly and will return `error` if something went wrong during the request.
 
 ### Creating users
 URL: `http://<host>:8080/user/create/<did>` <br>
@@ -125,13 +125,13 @@ Response:
  "status":"<status>"
 }
 ```
-`status` will be `success` if the data was pushed succesfully and `error` if somewthing went wrong during the request.
+`status` will be `success` if the data was pushed successfully and `error` if something went wrong during the request.
 
 # Server implementation
 Current version: 0.0.1-SNAPSHOT
 
 # Client Implementations
-- Unreal engine 4 (Simple)
+- [Unreal engine 4 (Simple)](QAtalog-unreal4/README.md)
  - Generates user ID & stores it
  - Simple instant push
  - Can push any key/value data
