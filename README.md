@@ -18,7 +18,7 @@ Some rules for the project to make sure updating the version of the project your
 - No functionality will become deprecated
 
 # License
-This project falls under the GNU General Public License v3.0 which full license can be found in the license.txt file.
+This project falls under the GNU General Public License v3.0 which full license can be found in the [license.txt](license.txt) file.
 
 # Documentation
 Below is listed the documentation about the communication between the server and client. This will allow for custom client implementations on any platform.
