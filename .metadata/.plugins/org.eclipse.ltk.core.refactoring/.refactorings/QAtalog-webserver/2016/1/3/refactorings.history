@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename method &apos;net.jeroenimoo0.qatalog.ServerTest.testSever()&apos; to &apos;testSeverStartAndStop&apos;&#x0D;&#x0A;- Original project: &apos;QAtalog-webserver&apos;&#x0D;&#x0A;- Original element: &apos;net.jeroenimoo0.qatalog.ServerTest.testSever()&apos;&#x0D;&#x0A;- Renamed element: &apos;net.jeroenimoo0.qatalog.ServerTest.testSeverStartAndStop()&apos;&#x0D;&#x0A;- Update references to refactored element" delegate="false" deprecate="false" description="Rename method &apos;testSever&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.method" input="/src\/test\/java&lt;net.jeroenimoo0.qatalog{ServerTest.java[ServerTest~testSever" name="testSeverStartAndStop" references="true" stamp="1452592081822" version="1.0"/>
-</session>
