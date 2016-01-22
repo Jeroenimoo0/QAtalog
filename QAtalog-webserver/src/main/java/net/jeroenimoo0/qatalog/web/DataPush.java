@@ -29,8 +29,8 @@ public class DataPush extends QAtalogServerResource {
 	
 	@Post("json")
 	public String toString(Representation entity) throws IOException {
-		String deviceId = getAttribute("did");
-		if(deviceId == null) return createError("missing parameter 'did' (Device ID)", 0x0);
+		String deviceId = getAttribute("uid");
+		if(deviceId == null) return createError("missing parameter 'uid' (User ID)", 0x1);
 		
 		String text = entity.getText();
 		

@@ -67,7 +67,7 @@ public class QAtalog {
 			
 			host.attach("/user/{did}", User.class);
 			host.attach("/user/create/{did}", UserCreate.class);
-			host.attach("/push/{did}", DataPush.class);
+			host.attach("/push/{uid}", DataPush.class);
 			
 			component.start();
 		} catch (Exception e) {
