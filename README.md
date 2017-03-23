@@ -131,16 +131,18 @@ Response:
 Current version: 1.0.0 Pre-release
 
 # Projects
-- [Unreal engine 4](QAtalog-unreal4/README.md) (Simple)
- - Generates user ID & stores it
- - Simple instant push
- - Can push any key/value data
-- [QAtalog webserver](QAtalog-webserver/)
- - Standalone webserver
- - Runs anywhere on java 8
- - Builds using maven
-- [QAtalog client](QAtalog-client/) (Planned)
- - C++ crossplatform
- - Creating users
- - Simple data batching
- - Data pushing
+[Unreal engine 4](QAtalog-unreal4/README.md) (Simple)
+* Generates user ID & stores it
+* Simple instant push
+* Can push any key/value data
+
+[QAtalog webserver](QAtalog-webserver/)
+* Standalone webserver
+* Runs anywhere on java 8
+* Builds using maven
+
+[QAtalog client](QAtalog-client/) (Planned)
+* C++ crossplatform
+* Creating users
+* Simple data batching
+* Data pushing
